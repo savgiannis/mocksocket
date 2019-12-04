@@ -38,6 +38,7 @@ app.get('/doctorResponse', function (req, res) {
     payload = false;
   }
 
+  
   mySocket.emit('doctorResponse', {
     payload
   });
