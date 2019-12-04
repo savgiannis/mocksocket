@@ -6,6 +6,7 @@ $(function () {
         action: 'approve'
       }
     });
+    
   })
 
   $('#ta-decline').click(() => {
@@ -13,7 +14,7 @@ $(function () {
       params: {
         action: 'decline'
       }
-      
+
     });
   });
 
