@@ -1,26 +1,24 @@
 $(function () {
 
   $('#ta-approve').click(() => {
-    axios.get('https://fierce-anchorage-37364.herokuapp.com/taResponse', {
+    axios.get('http://localhost:3000/taResponse', {
       params: {
         action: 'approve'
       }
     });
-    
   })
 
   $('#ta-decline').click(() => {
-    axios.get('https://fierce-anchorage-37364.herokuapp.com/taResponse', {
+    axios.get('http://localhost:3000/taResponse', {
       params: {
         action: 'decline'
       }
-
     });
   });
 
 
   $('#doctor-approve').click(() => {
-    axios.get('https://fierce-anchorage-37364.herokuapp.com/doctorResponse', {
+    axios.get('http://localhost:3000/doctorResponse', {
       params: {
         action: 'approve'
       }
@@ -28,11 +26,11 @@ $(function () {
   })
 
   $('#doctor-decline').click(() => {
-    axios.get('https://fierce-anchorage-37364.herokuapp.com/doctorResponse', {
+    axios.get('http://localhost:3000/doctorResponse', {
       params: {
         action: 'decline'
       }
     });
   });
 
-});
+}); 
