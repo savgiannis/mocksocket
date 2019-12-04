@@ -13,6 +13,7 @@ $(function () {
       params: {
         action: 'decline'
       }
+      
     });
   });
 
