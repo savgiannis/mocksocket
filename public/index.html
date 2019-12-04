@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test Socket.IO server</title>
+  <style>
+    .container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 240px;
+    }
+
+    button {
+      height: 35px;
+      width: 90px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="service">
+      <h1>Ta Response</h1>
+
+      <div class="buttons">
+        <button id="ta-approve">Aprove</button>
+        <button id="ta-decline">Decline</button>
+      </div>
+    </div>
+
+    <div class="service">
+      <h1>Doctor Response</h1>
+
+      <div class="buttons">
+        <button id="doctor-approve">Aprove</button>
+        <button id="doctor-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
