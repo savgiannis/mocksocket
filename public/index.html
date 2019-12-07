@@ -20,13 +20,19 @@
     .buttons {
       display: flex;
       justify-content: space-between;
-      width: 240px;
+      width: auto;
     }
 
     button {
       height: 35px;
-      width: 90px;
+      width: auto;
+      min-width: 90px;
       font-size: 16px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      text-align: center;
     }
   </style>
 </head>
@@ -49,6 +55,19 @@
       <div class="buttons">
         <button id="doctor-approve">Aprove</button>
         <button id="doctor-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="service">
+      <h1>Unreachable Dialogs</h1>
+
+      <div class="buttons">
+        <button id="insuranceEmailError">Insurance Email Error</button>
+        <button id="insuranceAboutToExpire">Insurance About to Expire</button>
+        <button id="insuraceExpired">Insurance Expired</button>
       </div>
     </div>
   </div>

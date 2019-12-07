@@ -33,4 +33,17 @@ $(function () {
     });
   });
 
+  $('#insuranceEmailError').click(() => {
+    axios.get('http://localhost:3000/insuranceEmailError');
+  });
+
+  $('#insuranceAboutToExpire').click(() => {
+    axios.get('http://localhost:3000/insuranceAboutToExpire');
+  });
+
+  $('#insuraceExpired').click(() => {
+    axios.get('http://localhost:3000/insuraceExpired');
+  });
+
+
 }); 

@@ -9,38 +9,71 @@ let mySocket;
 
 app.get('/taResponse', function (req, res) {
 
-  const action = req.query.action;
+  if (mySocket) {
 
-  let payload;
+    const action = req.query.action;
 
-  if (action === 'approve') {
-    payload = true;
-  } else {
-    payload = false;
+    let payload;
+
+    if (action === 'approve') {
+      payload = true;
+    } else {
+      payload = false;
+    }
+
+    mySocket.emit('taResponse', {
+      payload
+    });
   }
-
-  mySocket.emit('taResponse', {
-    payload
-  });
 
   res.send(null);
 })
 
 app.get('/doctorResponse', function (req, res) {
 
-  const action = req.query.action;
+  if (mySocket) {
 
-  let payload;
+    const action = req.query.action;
 
-  if (action === 'approve') {
-    payload = true;
-  } else {
-    payload = false;
+    let payload;
+
+    if (action === 'approve') {
+      payload = true;
+    } else {
+      payload = false;
+    }
+
+    mySocket.emit('doctorResponse', {
+      payload
+    });
   }
 
-  mySocket.emit('doctorResponse', {
-    payload
-  });
+  res.send(null);
+})
+
+app.get('/insuranceEmailError', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('insuranceEmailError');
+  }
+
+  res.send(null);
+})
+
+app.get('/insuranceAboutToExpire', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('insuranceAboutToExpire');
+  }
+
+  res.send(null);
+})
+
+app.get('/insuraceExpired', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('insuraceExpired');
+  }
 
   res.send(null);
 })
