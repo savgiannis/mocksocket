@@ -45,5 +45,25 @@ $(function () {
     axios.get('http://localhost:3000/insuraceExpired');
   });
 
+  $('#firstStep').click(() => {
+    axios.get('http://localhost:3000/firstStep');
+  });
+
+  $('#secondStep').click(() => {
+    axios.get('http://localhost:3000/secondStep');
+  });
+
+  $('#thirdStep').click(() => {
+    axios.get('http://localhost:3000/thirdStep');
+  });
+
+  $('#fourthStep').click(() => {
+    axios.get('http://localhost:3000/fourthStep');
+  });
+
+  $('#fifthStep').click(() => {
+    axios.get('http://localhost:3000/fifthStep');
+  });
+
 
 }); 

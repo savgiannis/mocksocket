@@ -78,6 +78,42 @@ app.get('/insuraceExpired', function (req, res) {
   res.send(null);
 })
 
+app.get('/firstStep', (req, res) => {
+  if(mySocket){
+    mySocket.emit('firstStep');
+  }
+  res.send(null);
+})
+
+app.get('/secondStep', (req, res) => {
+  if(mySocket){
+    mySocket.emit('secondStep');
+  }
+  res.send(null);
+})
+
+app.get('/thirdStep', (req, res) => {
+  if(mySocket){
+    mySocket.emit('thirdStep');
+
+  }
+  res.send(null);
+})
+
+app.get('/fourthStep', (req, res) => {
+  if(mySocket){
+    mySocket.emit('fourthStep');
+  }
+  res.send(null);
+})
+
+app.get('/fifthStep', (req, res) => {
+  if(mySocket){
+    mySocket.emit('fifthStep');
+  }
+  res.send(null);
+})
+
 server.listen(process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'public')));
 
