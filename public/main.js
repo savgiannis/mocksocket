@@ -1,7 +1,7 @@
 $(function () {
 
   $('#ta-approve').click(() => {
-    axios.get('http://localhost:3000/taResponse', {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/taResponse', {
       params: {
         action: 'approve'
       }
@@ -9,7 +9,7 @@ $(function () {
   })
 
   $('#ta-decline').click(() => {
-    axios.get('http://localhost:3000/taResponse', {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/taResponse', {
       params: {
         action: 'decline'
       }
@@ -18,7 +18,7 @@ $(function () {
 
 
   $('#doctor-approve').click(() => {
-    axios.get('http://localhost:3000/doctorResponse', {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/doctorResponse', {
       params: {
         action: 'approve'
       }
@@ -26,7 +26,7 @@ $(function () {
   })
 
   $('#doctor-decline').click(() => {
-    axios.get('http://localhost:3000/doctorResponse', {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/doctorResponse', {
       params: {
         action: 'decline'
       }
@@ -34,35 +34,35 @@ $(function () {
   });
 
   $('#insuranceEmailError').click(() => {
-    axios.get('http://localhost:3000/insuranceEmailError');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/insuranceEmailError');
   });
 
   $('#insuranceAboutToExpire').click(() => {
-    axios.get('http://localhost:3000/insuranceAboutToExpire');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/insuranceAboutToExpire');
   });
 
   $('#insuraceExpired').click(() => {
-    axios.get('http://localhost:3000/insuraceExpired');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/insuraceExpired');
   });
 
   $('#firstStep').click(() => {
-    axios.get('http://localhost:3000/firstStep');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/firstStep');
   });
 
   $('#secondStep').click(() => {
-    axios.get('http://localhost:3000/secondStep');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/secondStep');
   });
 
   $('#thirdStep').click(() => {
-    axios.get('http://localhost:3000/thirdStep');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/thirdStep');
   });
 
   $('#fourthStep').click(() => {
-    axios.get('http://localhost:3000/fourthStep');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/fourthStep');
   });
 
   $('#fifthStep').click(() => {
-    axios.get('http://localhost:3000/fifthStep');
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/fifthStep');
   });
 
 
