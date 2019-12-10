@@ -37,6 +37,10 @@ $(function () {
     });
   });
 
+  $('#cantFindDoctors').click(() => {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/cantFindDoctors');
+  });
+
   $('#insuranceEmailError').click(() => {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/insuranceEmailError');
   });
@@ -55,10 +59,6 @@ $(function () {
 
   $('#paymentFailed').click(() => {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/paymentFailed');
-  });
-
-  $('#cantFindDoctors').click(() => {
-    axios.get('https://dn2me-websocket-tests.herokuapp.com/cantFindDoctors');
   });
 
   /*====== TA ======*/
