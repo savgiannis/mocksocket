@@ -57,6 +57,9 @@ $(function () {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/paymentFailed');
   });
 
+  $('#cantFindDoctors').click(() => {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/cantFindDoctors');
+  });
 
   /*====== TA ======*/
 

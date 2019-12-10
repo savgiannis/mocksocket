@@ -107,6 +107,14 @@ app.get('/paymentFailed', function (req, res) {
   res.send(null);
 })
 
+app.get('/cantFindDoctors', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('cantFindDoctors');
+  }
+
+  res.send(null);
+})
 
 /*====== TA ======*/
 
