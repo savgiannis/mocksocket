@@ -1,5 +1,9 @@
 $(function () {
 
+
+  /*====== DOCTOR/PATIENT ======*/
+
+
   $('#ta-approve').click(() => {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/taResponse', {
       params: {
@@ -44,6 +48,18 @@ $(function () {
   $('#insuraceExpired').click(() => {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/insuraceExpired');
   });
+
+  $('#cardExpired').click(() => {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/cardExpired');
+  });
+
+  $('#paymentFailed').click(() => {
+    axios.get('https://dn2me-websocket-tests.herokuapp.com/paymentFailed');
+  });
+
+
+  /*====== TA ======*/
+
 
   $('#firstStep').click(() => {
     axios.get('https://dn2me-websocket-tests.herokuapp.com/firstStep');

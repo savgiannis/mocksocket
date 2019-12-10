@@ -8,11 +8,15 @@ const io = require('socket.io')(server);
 let mySocket;
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
 });
+
+
+/*====== DOCTOR/PATIENT ======*/
+
 
 app.get('/taResponse', function (req, res) {
 
@@ -85,22 +89,44 @@ app.get('/insuraceExpired', function (req, res) {
   res.send(null);
 })
 
+app.get('/cardExpired', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('cardExpired');
+  }
+
+  res.send(null);
+})
+
+app.get('/paymentFailed', function (req, res) {
+
+  if (mySocket) {
+    mySocket.emit('paymentFailed');
+  }
+
+  res.send(null);
+})
+
+
+/*====== TA ======*/
+
+
 app.get('/firstStep', (req, res) => {
-  if(mySocket){
+  if (mySocket) {
     mySocket.emit('firstStep');
   }
   res.send(null);
 })
 
 app.get('/secondStep', (req, res) => {
-  if(mySocket){
+  if (mySocket) {
     mySocket.emit('secondStep');
   }
   res.send(null);
 })
 
 app.get('/thirdStep', (req, res) => {
-  if(mySocket){
+  if (mySocket) {
     mySocket.emit('thirdStep');
 
   }
@@ -108,14 +134,14 @@ app.get('/thirdStep', (req, res) => {
 })
 
 app.get('/fourthStep', (req, res) => {
-  if(mySocket){
+  if (mySocket) {
     mySocket.emit('fourthStep');
   }
   res.send(null);
 })
 
 app.get('/fifthStep', (req, res) => {
-  if(mySocket){
+  if (mySocket) {
     mySocket.emit('fifthStep');
   }
   res.send(null);
