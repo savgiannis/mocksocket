@@ -32,7 +32,7 @@ app.get('/taResponse', function (req, res) {
       payload = false;
     }
 
-    mySocket.emit('taResponse', {
+    io.sockets.emit('taResponse', {
       payload
     });
   }
@@ -54,7 +54,7 @@ app.get('/doctorResponse', function (req, res) {
       payload = false;
     }
 
-    mySocket.emit('doctorResponse', {
+    io.sockets.emit('doctorResponse', {
       payload
     });
   }
@@ -65,7 +65,7 @@ app.get('/doctorResponse', function (req, res) {
 app.get('/insuranceEmailError', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('insuranceEmailError');
+    io.sockets.emit('insuranceEmailError');
   }
 
   res.send(null);
@@ -74,7 +74,7 @@ app.get('/insuranceEmailError', function (req, res) {
 app.get('/insuranceAboutToExpire', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('insuranceAboutToExpire');
+    io.sockets.emit('insuranceAboutToExpire');
   }
 
   res.send(null);
@@ -83,7 +83,7 @@ app.get('/insuranceAboutToExpire', function (req, res) {
 app.get('/insuraceExpired', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('insuraceExpired');
+    io.sockets.emit('insuraceExpired');
   }
 
   res.send(null);
@@ -92,7 +92,7 @@ app.get('/insuraceExpired', function (req, res) {
 app.get('/cardExpired', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('cardExpired');
+    io.sockets.emit('cardExpired');
   }
 
   res.send(null);
@@ -101,7 +101,7 @@ app.get('/cardExpired', function (req, res) {
 app.get('/paymentFailed', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('paymentFailed');
+    io.sockets.emit('paymentFailed');
   }
 
   res.send(null);
@@ -110,7 +110,7 @@ app.get('/paymentFailed', function (req, res) {
 app.get('/cantFindDoctors', function (req, res) {
 
   if (mySocket) {
-    mySocket.emit('cantFindDoctors');
+    io.sockets.emit('cantFindDoctors');
   }
 
   res.send(null);
@@ -121,21 +121,21 @@ app.get('/cantFindDoctors', function (req, res) {
 
 app.get('/firstStep', (req, res) => {
   if (mySocket) {
-    mySocket.emit('firstStep');
+    io.sockets.emit('firstStep');
   }
   res.send(null);
 })
 
 app.get('/secondStep', (req, res) => {
   if (mySocket) {
-    mySocket.emit('secondStep');
+    io.sockets.emit('secondStep');
   }
   res.send(null);
 })
 
 app.get('/thirdStep', (req, res) => {
   if (mySocket) {
-    mySocket.emit('thirdStep');
+    io.sockets.emit('thirdStep');
 
   }
   res.send(null);
@@ -143,14 +143,14 @@ app.get('/thirdStep', (req, res) => {
 
 app.get('/fourthStep', (req, res) => {
   if (mySocket) {
-    mySocket.emit('fourthStep');
+    io.sockets.emit('fourthStep');
   }
   res.send(null);
 })
 
 app.get('/fifthStep', (req, res) => {
   if (mySocket) {
-    mySocket.emit('fifthStep');
+    io.sockets.emit('fifthStep');
   }
   res.send(null);
 })
@@ -161,4 +161,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', (socket) => {
   mySocket = socket;
+  console.log("connected");
 });
